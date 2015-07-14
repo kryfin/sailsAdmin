@@ -1,0 +1,11 @@
+<a href="/accounts/index">List</a>
+<h2>Account #<%=model.accountName %> Update form</h2>
+<form action="/accounts/update/<%=model.accountId %>" method="POST">
+ <table>
+ <tr><td>account name<td><input type="text" name="Account[accountName]" value="<%=model.accountName %>"><br/>
+ <tr><td>password<td><input type="text" name="Account[accountPassword]" value="<%=model.accountPassword %>">
+ <tr><td>pid<td><input type="text" name="Account[personId]" value="<%=model.personId %>">
+ <tr><td>rid<td><input type="text" name="Account[roleId]" value="<%=model.roleId %>">
+ 
+ <tr ><td><td><input type="submit" value="SAVE">
+</form>

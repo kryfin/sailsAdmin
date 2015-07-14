@@ -1,0 +1,74 @@
+
+<style type="text/css">
+    .form-horizontal.well .control-group { margin: 0; }
+    #readme { float: none; margin: 0 auto; }
+</style>
+
+<!-- this library is loaded locally only for this view -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/3.0.2/highcharts.js" type="text/javascript" charset="utf-8"></script>
+
+
+<a href="/accounts/create">+Create</a>
+
+
+
+<div id="template-table">
+<table class="table table-bordered table-striped table-hover x-table">
+    <tbody>
+      <tr>
+  
+            <td>
+               Account name
+            </td>
+          
+             <td>
+          personId
+            </td>
+      
+       <td colspan="3">
+          Action
+            </td>
+      
+        <% accounts.forEach( function( model ){ %>
+        <tr>
+            
+
+
+
+        
+            <td>
+                <%= model.accountName %>
+                
+            </td>
+          
+             <td>
+                <%= model.personId %>
+            </td>
+      
+
+          
+ <td>
+
+             <a href="/accounts/view/<%=model.accountId %>" style="color:green;">v</a>
+                
+            </td>
+
+<td>
+ <a href="/accounts/update/<%= model.accountId %>" style="color:green;">✎</a>
+
+</td>
+<td >
+
+              <a href="/accounts/delete/<%= model.accountId %>" style="color:red;">X</a>
+            </td>
+
+        </tr>
+        <% }); %>
+    </tbody>
+
+
+</table>
+
+
+
+
